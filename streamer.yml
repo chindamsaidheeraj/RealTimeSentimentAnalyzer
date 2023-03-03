@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamer
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: streamer
+  template:
+    metadata:
+      labels:
+        app: streamer
+    spec:
+      nodeSelector:
+        "kubernetes.io/os": linux
+      containers:
+      - name: streamer
+        image: twitter.azurecr.io/streamer:latest
+        env:
+        - name: ARGS
+          value: "Endpoint=sb://hightpu.servicebus.windows.net/;SharedAccessKeyName=manager;SharedAccessKey=nRbntdyDgAPl7I4AOi4c9c0k9OYZaEr/AhtOG6XRcJA=;EntityPath=input input"
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
