@@ -3,7 +3,7 @@
 ## Problem statement
 
 The basic problem for this project is to perform sentiment analysis at scale on a 
-stream of tweets and visualize the results. The solution will aim to build a realtime streaming application that performs sentiment analysis on tweets and stores 
+stream of tweets and visualize the results. The solution will aim to build a realtime streaming application that performs sentiment analysis on tweets and stores 
 the data along with the analysis in a distributed file system.
 
 As the final part of the solution, a dashboard that displays the results after going 
@@ -241,7 +241,7 @@ can provision six 8-core nodes and 16 PU’s of event hub namespace.
 This solution is fully stable during the continuous flow of streaming data and it is 
 efficient in processing tweets and generating sentiments. This Solution processed 
 nearly 23 million streams of tweets. In the final result, 70.44 percent of tweets are 
-classified as negative and 29.56 percent as positive which are processed in realtime. This result was obtained when tested with the logistic regression machine 
+classified as negative and 29.56 percent as positive which are processed in realtime. This result was obtained when tested with the logistic regression machine 
 learning model which has the best f1 score as 0.76 when compared with other 
 machine learning models (Random Forest, Spark NLP pretrained) implemented
 in this project. As mentioned in the introduction realtime sentiment analysis 
