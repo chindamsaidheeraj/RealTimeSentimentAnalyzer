@@ -1,4 +1,4 @@
-# TimeSentimentAnalyzer
+# RealTimeSentimentAnalyzer
 
 ## Problem statement
 
